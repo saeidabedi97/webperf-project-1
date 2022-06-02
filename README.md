@@ -1,45 +1,20 @@
-# Weekly Project 1
+# Visit the website => https://travellperformance.vercel.app/
 
-You’ve just been hired by a company which runs a travel blog. The website was created from scratch by the founder but now it has a bad performance score. Users are turning away and its dropped down to the second page on Google Search.
+The mission of this cloned project is to increase the performance of an old website which was built 10 years ago without using any framework. 
 
-Your job is to take the existing website and make it load faster, both for first-time users and returning users.
+the performance of the website at the beggining was 39% but then with all optimizations and using express js it enhanced to 100% performance score in lighthouse. (Desktop)
+The performance of the website in mobile was 15% but now it is 79%. 
 
-## To get started
+These optimzations include compressing the images and converting them to webp format type. lazy loading has been used for secondary images. Different set of img sources has been set for different view breakpoints. 
 
-1. Clone this repository.
-2. Run `npm install`.
-3. Run `npm run dev` to run the dev server.
-4. Open [http://localhost:4000](http://localhost:4000) in your browser and start profiling its performance.
+below you can see the main reasons of choosing express js in this project. 
 
-## How to work?
+## Why express js?
+1-one of the main reasons of choosing express is that we can compress the text response headers with gzip by using the express middleware. 
+2-express js automatically sets the eTAG and last modified headers which helps to handle conditional requests. 
+3-with express js you can set up the catch but i have not used express for caching in this project. 
 
-Your goal is to create an optimised “production build” of this website. You can partially automate this with scripts, or do everything manually:
+## why deployed with Vercel? 
+My main goal was to find a CDN for the website in production mode. so i decided to deploy it in Vercel which automatically provides a CDN. 
+Vercel does the most of the job that i have done till now like compression and asset optimization but the main point in this project is to try and understand different performance enhancement techniques. 
 
-1. Copy the whole `src` folder into a new folder called `dist`.
-2. Start optimising the contents of the `dist` folder.
-3. Run `npm run dev:dist` to preview your “optimized website”.
-4. Commit and push the dist folder to your Github repository.
-
-## Optimization guidance
-
-- You can optimise all the static files, as long as they still contain the same design, content and functionality.
-- You can make changes to image quality and/or remove assets as long as the changes are mostly unnoticeable.
-- There is a lot of unused css/js in the project. You do not need to go over that with a comb and clean it up. That won’t be counted to the grade.
-- You are not allowed to rewrite the website in a different framework (e.g. React/Next). It should generally be the same code, just optimised.
-- You can improve the NodeJS server code and add npm dependencies.
-- You should implement or configure performance-related functionality yourself. E.g. you can install tools which minify assets or libraries which compress responses, but you should configure them yourself. You should not install some “UltraServer” package which does everything for you.
-- The only exception to this is that you are free to re-implement the server with express and express-static. But you won’t get a point for any of its built in performance improvements unless you either configure it yourself and/or document exactly what it improves from the original server.
-
-## Delivery
-
-Your delivery is your fork of the github repository with all of your changes.
-
-Your solution should be yours alone. You are welcome and encouraged to support your classmates. You can help them understand the material better, collaborate and brainstorm on solutions, share online resources and even discuss your approach in detail. But there should be **no sharing of code** whatsoever. Issues around this will be reported to the university and may have consequences for both of the parties involved.
-
-## Grading
-
-**Finish on time:** 30% (changes to 15% if delivered late or with less then half of the requirements)
-
-**Requirements:** 60%
-
-**Extra challenges:** 10% each (max 2)
